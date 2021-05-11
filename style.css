@@ -224,8 +224,9 @@ header nav ul li a:hover {
     align-items: center;
 }
 
-.contato .contato-card li svg{
-    width: 16px;
+.contato .contato-card li i{
+    width: 1rem;
+    font-size: 1.2rem;
     margin: 10px;
 
 }
