@@ -27,7 +27,11 @@ button {
     background: #A71914;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    transition: 500ms;
+}
 
+button:hover{
+    box-shadow: 0 8px 16px rgb(0 0 0 / 50%);    
 }
 
 header {
@@ -53,6 +57,14 @@ header nav ul {
 header nav ul li {
     margin: 0 15px;
 }
+header nav ul li a{
+    border-bottom: 3px solid transparent;
+    transition: 700ms;
+  }
+  
+header nav ul li a:hover {
+    border-bottom: 3px solid #A71914;
+}
 
 
 .header-content {
@@ -67,12 +79,29 @@ header nav ul li {
     font-size: 4rem;
 }
 
+.servicos {
+    padding: 30px 15px;
+}
+
+.servicos .card:hover {
+    box-shadow: 0 8px 16px rgb(0 0 0 / 20%);
+}
+
+.servicos .card{
+    width: 900px;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 5%);
+    transition: 1s;
+
+}
 
 .servicos .card-image{
-    max-width: 950px;
+    max-width: 900px;
     display: flex;
     flex-wrap: wrap;
-    border-radius: 24px;
     justify-content: center;
     align-items: center;
 
@@ -87,31 +116,16 @@ header nav ul li {
     transition: all 1s;
 }
 
-.servicos .card i:hover {
-    stroke: #A71914;
+.servicos .card-image img:first-child{
+    border-radius: 10px 0 0 0;
+}
+
+.servicos .card-image img:last-child{
+    border-radius: 0 10px 0 0;
+}
+
+.servicos .card-image img:hover {
     transform: scale(1.1);
-}
-
-
-
-
-
-.servicos {
-    padding: 30px 15px;
-}
-
-.servicos .card:hover {
-    box-shadow: 0 8px 16px rgb(0 0 0 / 10%);
-}
-
-.servicos .card{
-    width: 950px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    box-shadow: 0 4px 8px rgb(0 0 0 / 5%);
-
 }
 
 .servicos .card-title{
@@ -160,7 +174,7 @@ header nav ul li {
 
 .servicos .servicos-title {
     text-align: center;
-    margin: 20px 0;
+    margin: 30px;
 }
 
 .servicos .servicos-cards {
@@ -270,7 +284,7 @@ header nav ul li {
         background: #A71914;
         color: white;
         font-weight: bold;
-        height: 55PX;
+        height: 55px;
         margin: 0;
 
         display: flex;
