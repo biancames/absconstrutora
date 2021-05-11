@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 0;
+    background: #A71914;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+header {
+    height: calc(100vh - 100px) ;
+    background: no-repeat url(assets/header-image.jpg);
+}
+
+header nav {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    margin: auto 15px;
+}
+
+header nav p{
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+
+.header-content {
+    max-width: 400px;
+    margin: auto;
+    color: white;
+    text-align: center;
+}
+
+.header-content h1 {
+    margin-bottom: 10px;
+    font-size: 4rem;
+}
+
+
+.servicos .card-image{
+    max-width: 950px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 24px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.servicos .card-image img{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    transition: all 1s;
+}
+
+.servicos .card i:hover {
+    stroke: #A71914;
+    transform: scale(1.1);
+}
+
+
+
+
+
+.servicos {
+    padding: 30px 15px;
+}
+
+.servicos .card:hover {
+    box-shadow: 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+.servicos .card{
+    width: 950px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 5%);
+
+}
+
+.servicos .card-title{
+    margin: 1rem;
+    text-align: center;
+}
+
+.servicos .card-title i {
+   color: #F9BB00;
+}
+
+.servicos .card-title span {
+    color: #F9BB00;
+    font-size: 0.8rem;
+    margin: 2px;
+ }
+
+
+.servicos .card-title h3{
+    font-weight: bold;
+    margin: 3px;
+}
+.servicos .card .card-content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.servicos .card .card-content .portifolio-info{
+    color: #808284;
+    font-size: 0.8rem;
+    margin: 0 3rem;
+
+}
+
+.servicos .card .card-content .portifolio-info i{
+    margin: 10px;
+    font-size: 1rem;
+}
+
+.servicos .card p {
+    color: gray;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.servicos .servicos-title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.servicos .servicos-cards {
+    display: flex;
+    max-width: 950px;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.servicos button{
+    background: #A71914;
+    margin: 2rem;
+}
+
+.contato {
+    padding: 60px;
+    background: #e5e5e5;
+    position: relative;
+}
+.contato .contato-card{
+    width: 350px;
+    height: 300px;
+    background: white;
+    position: absolute;
+    z-index: 99;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    top: calc(50% - 150px);
+    left: calc(20% - 175px);
+}
+
+.contato .contato-card h1{
+    padding-left: 50px;
+    text-align: left;
+}
+
+.contato .contato-card li {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: gray;
+    display: flex;
+    align-items: center;
+}
+
+.contato .contato-card li svg{
+    width: 16px;
+    margin: 10px;
+
+}
+
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
+
+/* Responsividade */
+
+/* Especial para o mapa*/
+@media (max-width: 950px) {
+    .contato { 
+        padding: 60px 0;
+    }
+
+    .contato .contato-card {
+        left: 40px;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .contato { 
+        padding: 20px 0;
+    }
+
+    .contato .contato-card{
+        position: static;
+        margin: 40px auto;
+    }
+    
+}
+
+@media (max-width: 767px) {
+    
+}
+
+@media (max-width: 480px) {
+    body{
+        margin-bottom: 55px;
+    }
+
+    header nav ul{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 0;
+
+        z-index: 99;
+
+        background: #A71914;
+        color: white;
+        font-weight: bold;
+        height: 55PX;
+        margin: 0;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contato {
+        padding: 30px 0;
+    }
+
+    .contato .contato-card{
+        position: static;
+        margin: 40px auto;
+    }
+
+
+}

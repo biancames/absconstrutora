@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABS Construtora</title>
+    <script src="https://kit.fontawesome.com/91e98b9fc3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!--<img src="" alt="logo abs">-->
+        <p>ABS Construtora e Incorporadora</p>
+        <ul>
+          <li><a href="#incio">Inicio</a></li>
+          <li><a href="#portifolio"></a>Portifolio</a></li>
+          <li><a href="#servicos">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div id="home" class="header-content">
+        <h1>Residencial Irene</h1>
+        <p>Conheça nosso mais novo lançamento!</p>
+        <a href="#contato"><button>Entre em contato</button></a>
+      </div>
+    </header>
+
+    <section id="servicos" class="servicos">
+      <h1 class="servicos-title">Conheça nossos serviços</h1>
+      <div class="servicos-cards">
+
+        <div class="card">
+          <div class="card-image">
+            <img src="assets/fachada.jpg" alt="Fachada do Residencial Irene">
+            <img src="assets/cozinha.jpeg" alt="Cozinha do Residencial">
+            <img src="assets/banheiro.jpeg" alt="Banheiro do Residencial">
+          </div>
+          <div class="card-title">
+            <i class="fas fa-star"></i><span>DESTAQUE</span>
+            <h3>Residencial Irene</h3>
+          </div>
+          
+
+          <div class="card-content">            
+            <div class="portifolio-info">
+              <i class="fas fa-ruler"></i><span>50 metros</span>
+            </div>
+            <div class="portifolio-info">
+              <i class="fas fa-map-marked-alt"></i><span>Praia Grande - São Paulo</span>
+            </div>
+            <div class="portifolio-info">
+              <i class="fas fa-bed"></i><span>2 dormitórios</span>
+            </div>
+          </div>
+          <button>Saiba mais</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <div class="contato-card">
+            <h1>Entre em contato</h1>
+            <ul>
+                <li><i data-feather="phone"></i>(55) 9999-9999</li>
+                <li><i data-feather="mail"></i>contato@absconstrutora.com</li>
+                <a href="https://www.instagram.com/absconstrutorapg/"><li><i data-feather="instagram"></i>Instagram @absconstrutorapg</li></a>
+
+
+            </ul>
+
+        </div>
+    
+        <div id="map"></div>
+    </section>
+    
+   
+    <script>
+      feather.replace();
+
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+      function initMap() {
+        // The location of Uluru
+        const uluru = { lat: -25.344, lng: 131.036 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        });
+      }
+    </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?callback=initMap&libraries=&v=weekly"
+        async
+  ></script>
+    
+  </body>
+</html>
